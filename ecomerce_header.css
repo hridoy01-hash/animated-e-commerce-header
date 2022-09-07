@@ -140,19 +140,6 @@ body {
     border: 1px solid #000;
 }
 
-/* ====================================================
-        ===================== sidebar menu ====================
-        ==================================================== */
-
-
-
-
-
-
-
-
-
-
 /* ========================================== 
         ================= mobile footer =============
         ========================================== */
@@ -175,6 +162,7 @@ body {
 
 .s0401_header_icon_item {
     position: relative;
+    cursor: pointer;
 }
 
 
@@ -364,9 +352,10 @@ body {
 
 
 
-#s0401_search_box_area {
+/* #s0401_search_box_area {
     display: none;
-}
+} */
+
 
 .s0401_search_box_area {
     position: fixed;
@@ -377,9 +366,14 @@ body {
     background-color: rgba(30, 39, 46, .85);
     padding: 0px 20px;
     z-index: 3;
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+}
 
-
-
+.s0401_search_popup {
+    visibility: visible;
+    opacity: 1;
 }
 
 .s0401_search_box_container {
@@ -401,7 +395,7 @@ body {
     margin-bottom: 40px;
 }
 
-button.s0401_search_box_close_icon {
+.s0401_search_box_close_icon {
     background: transparent;
     border: none;
     outline: none;
@@ -460,6 +454,10 @@ button.s0401_search_box_close_icon {
     font-size: 12px;
     font-weight: 400;
     color: #000000;
+}
+
+.s0401_header_icon_item_common.active_fill_icon .s0401_header_icon_link svg path {
+    fill: #B0946D;
 }
 
 
